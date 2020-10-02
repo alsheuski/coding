@@ -4,9 +4,9 @@ exports.checkIfExist = (arr) => {
       arr.indexOf(arr[i] + arr[i], i + 1) !== -1 ||
       arr.indexOf(arr[i] / 2, i + 1) !== -1
     ) {
-      return true
+      return true;
     }
   }
 
-  return false
-}
+  return false;
+};

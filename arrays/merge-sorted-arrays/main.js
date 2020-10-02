@@ -18,22 +18,22 @@
 
 exports.merge = (nums1, m, nums2, n) => {
   if (n === 0) {
-    return
+    return;
   }
 
-  nums1.splice(m, nums1.length)
+  nums1.splice(m, nums1.length);
 
   for (let i = 0; i <= nums1.length - 1; i++) {
-    const a = nums1[i]
-    const b = nums2[0]
+    const a = nums1[i];
+    const b = nums2[0];
 
     if (a >= b) {
-      nums1.splice(i, 0, b)
-      nums2.splice(0, 1)
+      nums1.splice(i, 0, b);
+      nums2.splice(0, 1);
     }
   }
 
   if (nums2.length > 0) {
-    nums1.splice(nums1.length, 0, ...nums2)
+    nums1.splice(nums1.length, 0, ...nums2);
   }
-}
+};

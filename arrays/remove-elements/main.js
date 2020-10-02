@@ -17,9 +17,9 @@
 
 exports.removeElements = (nums, val) => {
   while (nums.indexOf(val) !== -1) {
-    const indexOfVal = nums.indexOf(val)
+    const indexOfVal = nums.indexOf(val);
 
-    nums.splice(indexOfVal, 1)
+    nums.splice(indexOfVal, 1);
   }
-  return nums.length
-}
+  return nums.length;
+};

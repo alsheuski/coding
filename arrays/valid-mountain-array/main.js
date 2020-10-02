@@ -25,41 +25,41 @@
  * Note:
  *
  *   0 <= A.length <= 10000
- *   0 <= A[i] <= 10000 
+ *   0 <= A[i] <= 10000
  *
  */
 
 exports.isMountainArray = (arr) => {
   if (arr.length < 3) {
-    return false
+    return false;
   }
 
   let direction = 'up';
 
-  for(let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     let curr = arr[i];
-    let next = arr[i+1];
+    let next = arr[i + 1];
 
-    if(curr === next){
-      return false;      
+    if (curr === next) {
+      return false;
     }
 
-    if(i === 0 && curr > next){
-        return false;
+    if (i === 0 && curr > next) {
+      return false;
     }
-    
-    if(curr > next){      
+
+    if (curr > next) {
       direction = 'down';
     }
 
-    if(curr < next && direction === 'down'){
-      return false
+    if (curr < next && direction === 'down') {
+      return false;
     }
   }
 
-  if(direction === 'up'){
+  if (direction === 'up') {
     return false;
   }
 
   return true;
-}
+};

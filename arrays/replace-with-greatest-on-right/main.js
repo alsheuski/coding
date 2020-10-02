@@ -17,20 +17,20 @@
  */
 
 exports.replaceGreatest = (arr) => {
-  let max = -1
+  let max = -1;
 
   for (let i = arr.length - 1; i >= 0; i--) {
     if (i === arr.length - 1) {
-      max = arr[i]
-      arr[i] = -1
+      max = arr[i];
+      arr[i] = -1;
     } else if (arr[i] > max) {
-      const tmp = arr[i]
-      arr[i] = max
-      max = tmp
+      const tmp = arr[i];
+      arr[i] = max;
+      max = tmp;
     } else {
-      arr[i] = max
+      arr[i] = max;
     }
   }
 
-  return arr
-}
+  return arr;
+};
